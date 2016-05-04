@@ -1,0 +1,25 @@
+﻿生成启动时间为 2016/5/4 20:52:24。
+     1>项目“C:\Users\MELCHIOR\Documents\Visual Studio 2013\Projects\CUDALibSVMSharp\libsvm_train_dense_gpu\libsvm_train_dense_gpu.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CONSOLE /D _CRT_SECURE_NO_DEPRECATE /D _DENSE_REP /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "svm-train.c"
+         svm-train.c
+     1>c:\users\melchior\documents\visual studio 2013\projects\cudalibsvmsharp\libsvm_train_dense_gpu\svm.h(3): warning C4005: “_DENSE_REP”: 宏重定义
+                 命令行参数: 参见前面的“_DENSE_REP”定义
+     1>c:\users\melchior\documents\visual studio 2013\projects\cudalibsvmsharp\libsvm_train_dense_gpu\kernel_matrix_calculation.c(131): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CONSOLE /D _CRT_SECURE_NO_DEPRECATE /D _DENSE_REP /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt svm.cpp
+         svm.cpp
+     1>c:\users\melchior\documents\visual studio 2013\projects\cudalibsvmsharp\libsvm_train_dense_gpu\svm.h(3): warning C4005: “_DENSE_REP”: 宏重定义
+                 命令行参数: 参见前面的“_DENSE_REP”定义
+     1>c:\users\melchior\documents\visual studio 2013\projects\cudalibsvmsharp\libsvm_train_dense_gpu\svm.cpp(2749): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(245) : 参见“strdup”的声明
+     1>c:\users\melchior\documents\visual studio 2013\projects\cudalibsvmsharp\libsvm_train_dense_gpu\svm.cpp(2879): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(245) : 参见“strdup”的声明
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\melchior\documents\visual studio 2013\Projects\CUDALibSVMSharp\Debug\libsvm_train_dense_gpu.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\Win32" cublas.lib cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\melchior\documents\visual studio 2013\Projects\CUDALibSVMSharp\Debug\libsvm_train_dense_gpu.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"c:\users\melchior\documents\visual studio 2013\Projects\CUDALibSVMSharp\Debug\libsvm_train_dense_gpu.lib" /MACHINE:X86 /SAFESEH "Debug\svm-train.obj"
+         Debug\svm.obj
+     1>LINK : fatal error LNK1104: 无法打开文件“cublas.lib”
+     1>已完成生成项目“C:\Users\MELCHIOR\Documents\Visual Studio 2013\Projects\CUDALibSVMSharp\libsvm_train_dense_gpu\libsvm_train_dense_gpu.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.56

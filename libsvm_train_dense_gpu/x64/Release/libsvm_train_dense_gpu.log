@@ -1,0 +1,31 @@
+﻿生成启动时间为 2016/5/3 22:25:19。
+     1>项目“C:\Research\LibSVMsharp-master\CUDA-master\src\windows\libsvm_train_dense_gpu\libsvm_train_dense_gpu.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:/Documents and Settings/All Users/Application Data/NVIDIA Corporation/NVIDIA GPU Computing SDK/C/common/inc" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /Zi /nologo /W3 /WX- /O2 /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _CRT_SECURE_NO_DEPRECATE /D _DENSE_REP /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /FAc /Fa"x64\Release\\" /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /FR"x64\Release\\" /Gd /TC /errorReport:prompt /Oa "svm-train.c"
+     1>cl : 命令行 warning D9002: 忽略未知选项“/Oa”
+         svm-train.c
+     1>c:\research\libsvmsharp-master\cuda-master\src\windows\libsvm_train_dense_gpu\svm.h(3): warning C4005: “_DENSE_REP”: 宏重定义
+                 命令行参数: 参见前面的“_DENSE_REP”定义
+     1>c:\research\libsvmsharp-master\cuda-master\src\windows\libsvm_train_dense_gpu\kernel_matrix_calculation.c(131): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:/Documents and Settings/All Users/Application Data/NVIDIA Corporation/NVIDIA GPU Computing SDK/C/common/inc" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /Zi /nologo /W3 /WX- /O2 /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _CRT_SECURE_NO_DEPRECATE /D _DENSE_REP /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /FAc /Fa"x64\Release\\" /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /FR"x64\Release\\" /Gd /TP /errorReport:prompt /Oa svm.cpp
+     1>cl : 命令行 warning D9002: 忽略未知选项“/Oa”
+         svm.cpp
+     1>c:\research\libsvmsharp-master\cuda-master\src\windows\libsvm_train_dense_gpu\svm.h(3): warning C4005: “_DENSE_REP”: 宏重定义
+                 命令行参数: 参见前面的“_DENSE_REP”定义
+     1>svm.cpp(2748): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+     1>svm.cpp(2878): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(245) : 参见“strdup”的声明
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Research\LibSVMsharp-master\CUDA-master\src\windows\x64\Release\libsvm_train_dense_gpu.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64" cublas.lib cudart.lib cuda.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Research\LibSVMsharp-master\CUDA-master\src\windows\x64\Release\libsvm_train_dense_gpu.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Research\LibSVMsharp-master\CUDA-master\src\windows\x64\Release\libsvm_train_dense_gpu.lib" /MACHINE:X64 /DLL "x64\Release\svm-train.obj"
+         x64\Release\svm.obj
+         正在生成代码
+         已完成代码的生成
+         libsvm_train_dense_gpu.vcxproj -> C:\Research\LibSVMsharp-master\CUDA-master\src\windows\x64\Release\libsvm_train_dense_gpu.dll
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Research\LibSVMsharp-master\CUDA-master\src\windows\x64\Release\libsvm_train_dense_gpu.bsc" /n "x64\Release\svm-train.sbr" x64\Release\svm.sbr
+     1>已完成生成项目“C:\Research\LibSVMsharp-master\CUDA-master\src\windows\libsvm_train_dense_gpu\libsvm_train_dense_gpu.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.50
