@@ -1,6 +1,6 @@
 CUDALibSVMSharp
 ====
-**.NET Framework Based LIBSVM Accelerated with GPU using the CUDA Framework**
+**.NET Framework Based LIBSVM Accelerated with GPU using CUDA **
 
 CUDALibSVMSharp is a modification of the [original LIBSVM](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) that exploits the CUDA framework to significantly reduce processing time while producing identical results. The functionality and interface of LIBSVM remains the same. The modifications were done in the kernel computation, that is now performed using the GPU. And it has been packaged as a standalone .NET wrapper using C++/CLI (for the .NET interface) and includes the modified C code of libsvm.
 
@@ -29,7 +29,7 @@ To showcase the performance gain using the CUDALibSVMSharp we present an example
 
 PC Setup
 
-    Intel Xeon cpu e4-1603 v3
+    Intel Xeon cpu E5-1603 v3
     Nvidia Quadro K2200
     16GB of DDR4 RAM
     Windows 10 64-bit OS
