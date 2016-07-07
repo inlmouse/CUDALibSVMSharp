@@ -83,14 +83,20 @@ static char* readline(FILE *input)
 	return line;
 }
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i;
 	char input_file_name[1024];
 	char model_file_name[1024];
 	const char *error_msg;
+	argc = 2;
+	char *ax[2]={"C:\\Research\\CUDALibSVMSharp\\x64\\Debug\\GPULibSvm.exe","C:\\Research\\LibSVMsharp-master\\LibSVMsharp.Examples.Classification\\bin\\Debug\\Dataset\\TrainZ.txt"};
+	
 
-	parse_command_line(argc, argv, input_file_name, model_file_name);
+		
+	parse_command_line(argc, ax, input_file_name, model_file_name);
+	//strcpy(input_file_name, "C:\\Research\\LibSVMsharp-master\\LibSVMsharp.Examples.Classification\\bin\\Debug\\Dataset\\TrainZ.txt");
+	
 	read_problem(input_file_name);
 	error_msg = svm_check_parameter(&prob,&param);
 	if(error_msg)
@@ -99,7 +105,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	if(cross_validation)
+	if(/*cross_validation*/1)
 	{
 		do_cross_validation_with_KM_precalculated(  );
 

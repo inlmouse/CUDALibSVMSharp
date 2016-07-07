@@ -1,0 +1,89 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly GPULibSvm, Version=0.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Struct GPULibSvm.Node: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Int32, Double[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Index : Public
+    Double[] Value : Public
+Struct GPULibSvm.Problem: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(GPULibSvm.Node[], Double[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    GPULibSvm.Node[] x : Public
+    Double[] y : Public
+  Properties:
+    Int32 Count 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, HideBySig, SpecialName
+Struct GPULibSvm.Parameter: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    GPULibSvm.SvmType SvmType : Public
+    GPULibSvm.KernelType KernelType : Public
+    Int32 Degree : Public
+    Double Gamma : Public
+    Double Coef0 : Public
+    Double CacheSize : Public
+    Double Eps : Public
+    Double C : Public
+    Int32[] WeightLabel : Public
+    Double[] Weight : Public
+    Double Nu : Public
+    Double p : Public
+    Int32 Shrinking : Public
+    Int32 Probability : Public
+Struct GPULibSvm.Model: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    GPULibSvm.Parameter Param : Public
+    Int32 NrClass : Public
+    Int32 l : Public
+    GPULibSvm.Node[] SV : Public
+    Double[][] SvCoef : Public
+    Double[] Rho : Public
+    Double[] ProbA : Public
+    Double[] ProbB : Public
+    Int32[] SvIndices : Public
+    Int32[] Label : Public
+    Int32[] nSV : Public
+    Int32 FreeSv : Public
+  Properties:
+    GPULibSvm.SvmType Type 'get ' : 
+  Methods:
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+Class GPULibSvm.Svm: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    ReadProblem(String): PrivateScope, Public, Static, HideBySig
+    Train(Problem, Parameter): PrivateScope, Public, Static, HideBySig
+    CrossValidation(Problem, Parameter, Int32): PrivateScope, Public, Static, HideBySig
+    Predict(Model, Node[]): PrivateScope, Public, Static, HideBySig
+    PredictValues(Model, Node[], Double[]): PrivateScope, Public, Static, HideBySig
+    PredictProbability(Model, Node[], Double[]): PrivateScope, Public, Static, HideBySig
+    SaveModel(String, Model): PrivateScope, Public, Static, HideBySig
+    LoadModel(String): PrivateScope, Public, Static, HideBySig
+    CheckParameter(Problem, Parameter): PrivateScope, Public, Static, HideBySig
+    CheckProbabilityModel(Model): PrivateScope, Public, Static, HideBySig
+Struct GPULibSvm.SvmType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    GPULibSvm.SvmType C_SVC = 0 : Public, Static, Literal, HasDefault
+    GPULibSvm.SvmType NU_SVC = 1 : Public, Static, Literal, HasDefault
+    GPULibSvm.SvmType ONE_CLASS = 2 : Public, Static, Literal, HasDefault
+    GPULibSvm.SvmType EPSILON_SVR = 3 : Public, Static, Literal, HasDefault
+    GPULibSvm.SvmType NU_SVR = 4 : Public, Static, Literal, HasDefault
+Struct GPULibSvm.KernelType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    GPULibSvm.KernelType LINEAR = 0 : Public, Static, Literal, HasDefault
+    GPULibSvm.KernelType POLY = 1 : Public, Static, Literal, HasDefault
+    GPULibSvm.KernelType RBF = 2 : Public, Static, Literal, HasDefault
+    GPULibSvm.KernelType SIGMOID = 3 : Public, Static, Literal, HasDefault
+    GPULibSvm.KernelType PRECOMPUTED = 4 : Public, Static, Literal, HasDefault
